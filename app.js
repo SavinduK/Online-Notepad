@@ -31,13 +31,15 @@ app.post('/',(req,res)=>{
 
         for (var key in data){
             if(data.hasOwnProperty(key)){
-                //console.log(key)
+                console.log(key)
                 if(username == key){
+                    console.log(key)
                     res.redirect(`/home/${username}`)
                     return
                 }}
         }
         data[`${username}`] = []
+        console.log(data)
         fs.writeFile(dbPath, JSON.stringify(data),'utf-8', (err) => {
             if (err) {
               throw err;
