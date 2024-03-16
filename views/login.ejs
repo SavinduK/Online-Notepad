@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/bootstrap.min.css">
+    <title>Login</title>
+    <style>
+        body{
+          display: flex;
+          background-image: url('/imgs/background.jpg');
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+    </style>
+</head>
+<body>
+  <div class="card w-50  mb-3 mx-auto ">
+  <div class="card-body">
+  <h2 align="center" class="card-title">Login</h2>
+    <form method="POST" action="/"> 
+        <div class="form-group">
+            <label for="username" style="font-weight: bold;"> UserName</label>
+            <input type="text" id="username" name="username" placeholder="Enter UserName" class="form-control">
+            <br>
+            
+            <button class="btn btn-lg btn-success" style="float:right;">Login</button>
+        </div>
+    </form> 
+  </div></div>
+</body>
+</html>

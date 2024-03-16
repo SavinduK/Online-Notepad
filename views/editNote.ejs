@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/bootstrap.min.css">
+    <title>Note</title>
+    <style>
+        body{
+          background-image: url('/imgs/background.jpg');
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+            width: 100%;
+            margin-top: 10%;
+        }
+       
+    </style>
+</head>
+
+<body>  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/home/<%= username%>">Home</a> 
+                <a class="nav-item nav-link" href="/add/<%= username%>">New Note</a>
+                <a class="nav-item nav-link" href="/">Logout</a>
+            </div></div>
+      </nav>
+
+      <div class="container">
+        <div class="card w-50  mb-3 mx-auto ">
+        <div class="card-body">
+            <div class="form-group">
+            <form action="/note/<%= username%>/<%= id%>" method="POST">
+            <label for="title" style="font-weight:bold;">Title</label>  
+            <input type="text" name="title" id="title" placeholder="Enter Title" value="<%= note[0]%>" class="form-control">
+            <br>
+            <label for="text" style="font-weight:bold;">Text</label>
+            <textarea name="text" id="text" rows="4" placeholder="Enter Text" class="form-control"><%= note[1]%></textarea>
+            <br>
+            <button class="btn btn-lg btn-success" style="float:right;">Save</button>
+            </div>
+            </form>
+        </div></div>
+      </div>    
+
+</body>
+</html>
