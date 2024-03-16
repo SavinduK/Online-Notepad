@@ -33,7 +33,7 @@ app.post('/',(req,res)=>{
             if(data.hasOwnProperty(key)){
                 //console.log(key)
                 if(username == key){
-                    res.redirect(`/home/${username}`)
+                console.log(key)                    res.redirect(`/home/${username}`)
                     return
                 }}
         }
