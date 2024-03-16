@@ -38,6 +38,7 @@ app.post('/',(req,res)=>{
                 }}
         }
         data[`${username}`] = []
+        console.log(data)
         fs.writeFile(dbPath, JSON.stringify(data),'utf-8', (err) => {
             if (err) {
               throw err;
