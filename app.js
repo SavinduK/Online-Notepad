@@ -27,6 +27,7 @@ app.post('/',(req,res)=>{
             throw err
           }
         username = req.body.username
+        username = username.trim()
         data = JSON.parse(data)
 
         for (var key in data){
